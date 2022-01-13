@@ -22,7 +22,7 @@ export default function App(props) {
     if (decodedToken.exp * 1000 <= Date.now()) {
       props.history.push("/");
     } else {
-      var response = await axios.get("http://localhost:3001/furnitureDetails/get", {
+      var response = await axios.get("https://integra-node.herokuapp.com/furnitureDetails/get", {
         headers: {
           "access-token": token,
         },
